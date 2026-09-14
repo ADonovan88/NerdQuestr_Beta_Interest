@@ -6,5 +6,5 @@
  */
 window.NERDQUESTR_BETA_CONFIG = Object.freeze({
   googleAppsScriptUrl: "https://script.google.com/macros/s/AKfycbw_pLWmMJP6AWzQgNA0JhhXxdvDdrS9LXR42oUZX6HcQeOmXNmBRdLGJSmS4dOcgTj6Tw/exec",
-  launchApproved: false
+  launchApproved: true
 });

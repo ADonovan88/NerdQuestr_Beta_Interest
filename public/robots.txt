@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-# Pages and HTTP headers request noindex. This is not password protection.

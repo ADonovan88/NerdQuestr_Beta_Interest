@@ -107,16 +107,10 @@
     }
   }
 
-  // Paid sessions are a subset of total sessions, when both numbers are supplied.
+    // Check each answer independently, without comparing it to other answers.
   function validateSessionConsistency() {
-    for (const [paidId, totalId] of [["gm_paid_sessions-number", "hosted-games"], ["player_paid_sessions-number", "played-games"]]) {
-      const paid = byId(paidId);
-      const total = byId(totalId);
-      validateField(paid);
-      if (!paid.matches(":disabled") && paid.value !== "" && total.value !== "" && paid.validity.valid && total.validity.valid && Number(paid.value) > Number(total.value)) {
-        paid.setCustomValidity("Paid sessions cannot exceed your total sessions for the same past 30 days. Please check both answers.");
-      }
-    }
+    validateField(byId("gm_paid_sessions-number"));
+    validateField(byId("player_paid_sessions-number"));
   }
 
   // The visitor explicitly chooses a time zone. No IP lookup or geolocation.
